@@ -1,0 +1,83 @@
+<!DOCTYPE·html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Àrtums</title>
+<link rel="stylesheet" href="estilos.css"/>
+</head>
+
+<body>
+<!--encabezado-->
+    <header>
+    <img width=200px src="C:\Users\isabe\OneDrive\Escritorio\23.png"/>
+    <p> 
+        <br/> <a class=button href="index.html">Inicio</a> 
+        <a class=button href="productos.html">Productos</a>  
+        <a class="button" href="info.html">Sobre nosotros</a>  
+        <a class="button" href="sucursales.html">Sucursales</a>
+        <a class="button" href="#" id="botonCarrito">Carrito</a>
+   </p> 
+    </header>
+
+<body>   
+    
+<h1>Tu compra</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody id="tablaProductos"></tbody>
+  </table>
+  <div id="total">Total: $0</div>
+  <button id="finalizarCompraBtn">Finalizar compra</button>
+
+<div id="mensajeEmergente">
+  <h2>Gracias por utilizar la versión de prueba del sitio de Àrtums!</h2>
+  <h2>Deje aquí sus comentarios</h2>
+    <form>
+        <label>Usuario</label> <input type="text"/> </br>
+        <label>Comentario</label> </br> <input type="text" style=" width: 300px; height: 100px;"/> </br>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+  <button onclick="cerrarEmergente()" style="margin-top: 15px; padding: 8px 16px;">Cerrar</button>
+</div>
+
+<script>
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  const tabla = document.getElementById("tablaProductos");
+  const totalDiv = document.getElementById("total");
+  let total = 0;
+
+  carrito.forEach(item => {
+    const fila = document.createElement("tr");
+    fila.innerHTML = `
+      <td>${item.nombre}</td>
+      <td>$${Number(item.precio).toLocaleString()}</td>
+    `;
+    tabla.appendChild(fila);
+    total += Number(item.precio);
+    });
+
+  totalDiv.textContent = "Total: $" + total.toLocaleString();
+  const mensaje = document.getElementById("mensajeEmergente");
+  const fondo = document.getElementById("fondoOscuro");
+  const btnFinalizar = document.getElementById("finalizarCompraBtn");
+
+  btnFinalizar.addEventListener("click", () => {
+    mensaje.style.display = "block";
+    fondo.style.display = "block";
+    localStorage.removeItem("carrito"); // limpia el carrito si querés
+  });
+
+  function cerrarEmergente() {
+    mensaje.style.display = "none";
+    fondo.style.display = "none";
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

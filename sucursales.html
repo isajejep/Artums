@@ -1,0 +1,84 @@
+<!DOCTYPE·html>
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<meta charset="utf-8"/>
+<title>Àrtums</title>
+<link rel="stylesheet" href="estilos.css"/>
+</head>
+
+<body>
+<!--encabezado-->
+<header>
+    <img width=200px src="C:\Users\isabe\OneDrive\Escritorio\23.png"/>
+    <p> <br/> <a class=button href="index.html">Inicio</a> 
+        <a class=button href="productos.html">Productos</a>  
+        <a class="button" href="info.html">Sobre nosotros</a>  
+        <a class="button" href="sucursales.html">Sucursales</a>
+        <a class="button" href="#" id="botonCarrito">Carrito</a>
+    </p> 
+    </header>
+<!-- cosas del carrito -->
+  <div id="carritoFlotante">
+  <h3>Productos en el carrito</h3>
+  <div id="contenidoCarrito"></div>
+  <img id="gifVacio" src="https://media1.tenor.com/m/q-E5wj1K6OYAAAAC/monsters-inc-sully.gif" alt="Está vacío..." style="width:100%; display:none; margin-top:10px;">
+  <br/><button id="vaciarCarrito" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Vaciar carrito</button>
+  <button id="comprarCarrito" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Comprar</button>
+    </div>
+    <div id="mensajeAlerta"></div>
+  <script src="carrito.js"></script>
+
+<hr>
+
+<h1>¿Dónde puedo retirar mi pedido?</h1>
+
+<div id="botonesSucursales">
+  <button onclick="mostrarSucursal('caba')">Sucursales en CABA</button>
+  <button onclick="mostrarSucursal('gba')">Sucursales en GBA</button>
+  <button onclick="mostrarSucursal('interior')">Sucursales en el Interior del país</button>
+</div>
+
+<div id="contenidoSucursales">
+  <div id="sucursal-caba" class="sucursal" style="display:none;">
+    <ul>
+      <li>Palermo - Av. Santa Fe 1234</li>
+      <li>Recoleta - Junín 1234</li>
+      <li>Caballito - Rivadavia 1234</li>
+    </ul>
+  </div>
+
+  <div id="sucursal-gba" class="sucursal" style="display:none;">
+    <ul>
+      <li>San Isidro - Belgrano 123</li>
+      <li>Morón - Av. Rivadavia 12345</li>
+      <li>Lomas de Zamora - España 123</li>
+    </ul>
+  </div>
+
+  <div id="sucursal-interior" class="sucursal" style="display:none;">
+    <ul>
+      <li>Córdoba Capital - Gral Paz 123</li>
+      <li>Rosario - Córdoba 123</li>
+      <li>Mendoza - San Martín 123</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function mostrarSucursal(zona) {
+    document.querySelectorAll('.sucursal').forEach(div => {
+      div.style.display = 'none';
+    });
+    document.getElementById(`sucursal-${zona}`).style.display = 'block';
+  }
+</script>
+
+<hr>
+
+<h2>Horarios</h2>
+<ul style="font-size: large;">
+    <li>Lunes a Viernes: de 9hs a 17hs</li>
+    <li>Sabados: de 10hs a 17hs</li>
+    <li>Domingos: de 12hs a 17hs</li>
+</ul>

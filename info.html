@@ -1,0 +1,129 @@
+<!DOCTYPE·html>
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<meta charset="utf-8"/>
+<title>Àrtums</title>
+<link rel="stylesheet" href="estilos.css"/>
+</head>
+
+<body>
+<!--encabezado-->
+<header>
+    <img width=200px src="C:\Users\isabe\OneDrive\Escritorio\23.png"/>
+    <p> <br/> <a class=button href="index.html">Inicio</a> 
+        <a class=button href="productos.html">Productos</a>  
+        <a class="button" href="info.html">Sobre nosotros</a>  
+        <a class="button" href="sucursales.html">Sucursales</a>
+        <a class="button" href="#" id="botonCarrito">Carrito</a>
+    </p> 
+    </header>
+<!-- cosas del carrito -->
+  <div id="carritoFlotante">
+  <h3>Productos en el carrito</h3>
+  <div id="contenidoCarrito"></div>
+  <img id="gifVacio" src="https://media1.tenor.com/m/q-E5wj1K6OYAAAAC/monsters-inc-sully.gif" alt="Está vacío..." style="width:100%; display:none; margin-top:10px;">
+  <br/><button id="vaciarCarrito" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Vaciar carrito</button>
+  <button id="comprarCarrito" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Comprar</button>
+    </div>
+    <div id="mensajeAlerta"></div>
+  <script src="carrito.js"></script>
+
+<hr>
+
+<h1>¿Quiénes somos?</h1>
+<p>En Àrtums nos especializamos en la comercialización online de zapatillas importadas de primer nivel. Contamos con vínculos directos con representantes de marcas líderes como Nike, Adidas y Converse, lo que nos permite acceder a productos originales, de excelente calidad y con disponibilidad limitada en el mercado local.
+</br>Nuestro objetivo es ofrecer a nuestros clientes una experiencia de compra confiable, con acceso a modelos exclusivos y precios competitivos. En Àrtums combinamos conocimiento del comercio internacional, pasión por el calzado y compromiso con la excelencia.</br></p>
+
+<!-- slides-->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://pymstatic.com/70329/conversions/departamentos-empresa-small-16_9.jpg" /></div>
+    <div class="swiper-slide"><img src="https://www.pwc.es/es/servicios/assets/empresa-familiar.jpg" /></div>
+    <div class="swiper-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9QebBY113H5mxxaOe2spRQt45NON8rq52RcEWo_gp36RIkqdqMSlV-FJ4zSDiv0F38ew&usqp=CAU" /></div>
+    </div>
+  <!-- botones -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- puntos -->
+    <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      });
+    </script>
+
+<h2 style="background-color: #ff00e6; margin: 40px auto; width: 900px; padding: 15px 15px;box-shadow: 0 4px 10px gray; color: white;"
+>Fuimos consagrados la tienda online #1 de Argentina en 2024 por el ICII!</h2>
+
+<hr>
+
+<div style="display: flex;flex-wrap: wrap;">
+  <article style="margin-left: 150px;" type="article">
+    <h2>Nuestra misión</h2>
+    <img style="width: 250px;" alt="mision" src="https://img1.picmix.com/output/stamp/thumb/5/9/2/9/1889295_6af00.gif";>
+  </article>
+  <article style="margin-left: 700px;" type="article">
+    <h2>Nuestra visión</h2>
+    <img style="width: 250px;" alt="vision" src="https://media.baamboozle.com/uploads/images/261106/1659633530_154081_gif-url.gif";>
+  </article>
+</div>
+<hr style="margin-top: 30px;">
+
+<div style="display: flex;flex-wrap: wrap;"> 
+  <article type="article">
+    <h1>¿Cómo nació Àrtums?</h1>   
+    <p style="width: 650px; text-align: justify;">Àrtums nació de una amistad forjada en los pasillos de la Universidad del Salvador. En 2015, XXX y ZZZ se graduaron en Comercio Exterior, unidos no solo por su formación académica, sino por una pasión compartida: las ventas y el deseo de emprender.
+
+    </br> Tras egresar, el contexto del mercado argentino presentaba un desafío: los productos importados estaban prácticamente fuera del alcance del consumidor promedio debido a los altos precios. En una charla navideña, la madre de XXX comentó con frustración que no podía encontrar calzado accesible para regalarle a sus sobrinos. No era una cuestión de escasez, sino de precios inalcanzables. Ese comentario encendió una chispa.
+
+    </br>XXX compartió la situación con ZZZ, y juntos comenzaron a pensar soluciones. Ambos mantenían contacto con excompañeros que trabajaban en grandes empresas en Estados Unidos, donde el mismo producto se conseguía a precios mucho más bajos. Entonces surgió la pregunta que lo cambió todo: ¿y si nosotros mismos fuésemos quienes fijan los precios?
+
+    </br>Con esa idea en mente, comenzaron a trabajar. Investigaron, tramitaron permisos, y así nació Àrtums, una marca con identidad propia y una misión clara: ofrecer productos de calidad internacional a precios justos.
+
+    </br>Desde entonces, Àrtums ha crecido gracias a una red de contactos estratégicos con representantes de marcas multinacionales, y al compromiso constante con la innovación y el acceso. Lo que empezó como una conversación en familia, hoy es una empresa en expansión que conecta mercados y personas, desde Argentina hacia el mundo.
+  </article>
+  <article type="article">
+    <h2 style="margin-left: 300px;">Nuestras marcas amigas</h2>
+    <img style="margin-left: 150px;"alt="empresas" src="https://okdiario.com/img/vida-sana/2015/06/marcasdeportivas.jpg">
+  </article>
+</div>
+</br>
+
+<h2>Comentarios de compradores</h2>
+<div class="carrusel">
+  <div class="carrusel-contenedor">
+    <img style="height: 220px; width: auto; margin-left: 40px;" src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\op3.png" class="carrusel-imagen" alt="Imagen 1">
+    <img style="height: 220px; width: auto;margin-left: 40px;" src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\com1.png" class="carrusel-imagen" alt="Imagen 3">
+    <img style="height: 220px; width: auto;margin-left: 40px;" src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\com2.png" class="carrusel-imagen" alt="Imagen 4">
+    <img style="height: 220px; width: auto;margin-left: 40px;" src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\com6.png" class="carrusel-imagen" alt="Imagen 5">
+    <img style="height: 220px; width: auto;margin-left: 40px;" src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\com7.png" class="carrusel-imagen" alt="Imagen 6">
+    <img style="height: 220px; width: auto;margin-left: 40px;" src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\op4.png" class="carrusel-imagen" alt="Imagen 2">
+    <img style="height: 220px; width: auto;margin-left: 40px;" src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\com5.png" class="carrusel-imagen" alt="Imagen 7">
+  </div>
+</div>
+<hr>
+
+<h1>Contacto</h1>
+<h3>CEOs:</h3>
+<p>XXX </br>
+ZZZ</p>
+<h3>Teléfono de la sucursal principal: ***********</h3>
+<h3>Dirección de la sucursal principal: ?????<h3>
+
+</body>
+</html>

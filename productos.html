@@ -1,0 +1,132 @@
+<!DOCTYPE·html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Àrtums</title>
+<link rel="stylesheet" href="estilos.css"/>
+</head>
+
+<body>
+
+    <!--encabezado-->
+<header>
+    <img width=200px src="C:\Users\isabe\OneDrive\Escritorio\23.png"/>
+    <p> <br/> <a class=button href="index.html">Inicio</a> 
+        <a class=button href="productos.html">Productos</a>  
+        <a class="button" href="info.html">Sobre nosotros</a>  
+        <a class="button" href="sucursales.html">Sucursales</a>
+        <a class="button" href="#" id="botonCarrito">Carrito</a>
+    </p> 
+    </br><input type="text" id="buscador" placeholder="Buscar producto..." />
+    <button style="cursor: pointer;" onclick="buscarProducto()">Buscar</button>
+    </header>
+<hr>
+
+<!--buscador-->
+<script>
+  function buscarProducto() {
+    const input = document.getElementById("buscador").value.toLowerCase();
+    const productos = document.querySelectorAll(".cajas"); 
+
+    productos.forEach(producto => {
+      const nombre = producto.querySelector("p").innerText.toLowerCase();
+      if (nombre.includes(input)) {
+        producto.style.display = "block";
+      } else {
+        producto.style.display = "none";
+      }
+    });
+  }
+    </script>
+
+    <!-- cosas del carrito -->
+<div id="carritoFlotante">
+  <h3>Productos en el carrito</h3>
+    <div id="contenidoCarrito"></div>
+    <img id="gifVacio" src="https://media1.tenor.com/m/q-E5wj1K6OYAAAAC/monsters-inc-sully.gif" alt="Está vacío..." style="width:100%; display:none; margin-top:10px;">
+    <br/><button id="vaciarCarrito" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Vaciar carrito</button>0
+    <button id="comprarCarrito" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Comprar</button>
+        </div>
+        <div id="mensajeAlerta"></div>
+<script src="carrito.js"></script>
+
+
+ <!--productos-->
+<div id="mujer">
+    <h1>Zapatillas de mujer</h1>
+    <section id="seccion">
+        <div class="productos">
+            <section class="cajas">
+                <img width=150px src="https://marathon.vtexassets.com/arquivos/ids/564974/Talle-38-1.jpg?v=638569226148030000"/>
+                <p class="nombre">FILA FX-100 All Terrain Low </p>
+                <p>$159999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="https://nikearprod.vtexassets.com/arquivos/ids/1336222-1200-1200?width=1200&height=1200&aspect=true"/>
+                <p class="nombre">NIKE V2K Run</p>
+                <p>$249999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="https://nikearprod.vtexassets.com/arquivos/ids/1394464-1000-1000?v=638785033907100000&width=1000&height=1000&aspect=true"/>
+                <p class="nombre">NIKE Dunk Low</p>
+                <p>$229999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="https://www.newbalance.com.ar/on/demandware.static/-/Sites-siteCatalog_NBEU/default/dwbc50f81d/new_images/N10198002101/N10198002101-IMAGE-1.webp"/>
+                <p class="nombre">NEW BALANCE 550</p>
+                <p>$159999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="https://nikearprod.vtexassets.com/arquivos/ids/1129002-1200-1200?width=1200&height=1200&aspect=true"/>
+                <p class="nombre">NIKE Air Jordan 1 Mid SE</p>
+                <p>$249999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+        </div>
+    </section>
+    </div>
+
+<div id="hombre">
+    <hr><h1>Zapatillas de hombre</h1>
+    <section id="seccion">
+        <div class="productos">
+            <section class="cajas">
+                <img width=150px src="https://nikearprod.vtexassets.com/arquivos/ids/1264443-1000-1000?v=638697015994300000&width=1000&height=1000&aspect=true"/>
+                <p class="nombre">NIKE Air Jordan Mid 1 </p>
+                <p>$229999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="?"/>
+                <p class="nombre">xxxx</p>
+                <p>$249999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="?"/>
+                <p>xxxx</p>
+                <p>$229999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="?"/>
+                <p>xxx</p>
+                <p>$159999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+            <section class="cajas">
+                <img width=150px src="?"/>
+                <p>xxxxxx</p>
+                <p>$249999</p> 
+                <button class="carritoprevio">Agregar al carrito</button>
+            </section>
+        </div>
+    </section>
+    </div>
+
+</body>
+</html>
