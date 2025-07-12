@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     contenido.innerHTML = ""; // Borrar lo visible
     gif.style.display = "block";
     botonComprar.style.display = "none";
-    mostrarAlerta("por que....vaciaste tu carrito :(((((");
+    mostrarAlerta("vaciaste tu carrito :(((((");
   });
 
   //  alerta !!!!!!!!
