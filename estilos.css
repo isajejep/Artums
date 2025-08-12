@@ -10,13 +10,6 @@ header{
     padding: 5px;
     width:100%,
 }
-.encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    background-color: #ffffff; /* Cambia si querés un color de fondo */
-}
 
 .slogan-video-banner {
     position: relative;
@@ -354,6 +347,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 40%;
   font-size: large;
 }
+
 
 
 
