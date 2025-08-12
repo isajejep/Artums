@@ -10,6 +10,27 @@ header{
     padding: 5px;
     width:100%,
 }
+.slogan-banner {
+    background-image: url('https://images.unsplash.com/photo-1617957741978-901ea443707f?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.slogan-texto {
+    font-size: 2em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro semi-transparente */
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
 .encabezado {
     display: flex;
@@ -327,4 +348,5 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 40%;
   font-size: large;
 }
+
 
