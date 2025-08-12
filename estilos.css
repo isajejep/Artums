@@ -67,26 +67,11 @@ header{
     text-align: center;
 }
 
-.navegacion .button {
-    text-decoration: none;
-    padding: 10px 15px;
-    background-color: #ffb417;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.navegacion .button:hover {
-    background-color: #e09f00;
-}
-
 .linea-header {
     border: none;
     border-top: 2px solid #ccc;
     margin: 0;
 }
-
-
 
 .button{
   color: white;
@@ -361,6 +346,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 40%;
   font-size: large;
 }
+
 
 
 
