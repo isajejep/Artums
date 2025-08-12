@@ -9,19 +9,18 @@
 <body>
 
     <!--encabezado-->
-<header>
-    <img width=200px src="logo.jpg"/>
-    <p> <br/> <a class=button href="index.html">Inicio</a> 
-        <a class=button href="productos.html">Productos</a>  
-        <a class="button" href="info.html">Sobre nosotros</a>  
+    <header class="encabezado">
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo Àrtums" />
+    </div>
+    <nav class="navegacion">
+        <a class="button" href="index.html">Inicio</a>
+        <a class="button" href="productos.html">Productos</a>
+        <a class="button" href="info.html">Sobre nosotros</a>
         <a class="button" href="sucursales.html">Sucursales</a>
         <a class="button" href="#" id="botonCarrito">Carrito</a>
-    </p> 
-    </br><input type="text" id="buscador" placeholder="Buscar producto..." />
-    <button style="cursor: pointer;" onclick="buscarProducto()">Buscar</button>
-    </header>
-<hr>
-
+    </nav>
+</header>
 <!--buscador-->
 <script>
   function buscarProducto() {
@@ -130,3 +129,4 @@
 
 </body>
 </html>
+
