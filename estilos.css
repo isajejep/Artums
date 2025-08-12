@@ -2,19 +2,10 @@ body{
     background: white;
 font-family: Aileron, sans-serif;
 }
-
-header{
-    color: black;
-    background-color: white;
-    text-align: center;
-    padding: 5px;
-    width:100%,
-}
-
 .slogan-banner {
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height:400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -333,6 +324,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 40%;
   font-size: large;
 }
+
 
 
 
