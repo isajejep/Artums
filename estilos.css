@@ -12,7 +12,6 @@ header{
 }
 
 .slogan-banner {
-    background-image: url('https://www.clarin.com/2020/01/22/xeY76YWZ_1200x0__1.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -334,6 +333,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 40%;
   font-size: large;
 }
+
 
 
 
