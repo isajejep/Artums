@@ -5,49 +5,71 @@
 <title>Àrtums</title>
 <link rel="stylesheet" href="estilos.css"/>
 </head>
-
 <body>
+
 <!--encabezado-->
-    <header class="encabezado">
-    <div class="logo">
-        <img src="logo.jpg" alt="Logo Àrtums" />
-    </div>
-    <nav class="navegacion">
-        <a class="button" href="index.html">Inicio</a>
-        <a class="button" href="productos.html">Productos</a>
-        <a class="button" href="info.html">Sobre nosotros</a>
+<header class="encabezado">
+    <a href="index.html">
+    <img width=70px src="logo.jpg" href="index.html"/></a>
+    <nav> 
+        <a class=button href="productos.html">Productos</a>  
+        <a class="button" href="info.html">Sobre nosotros</a>  
         <a class="button" href="sucursales.html">Sucursales</a>
+        </nav> 
+        <div> 
         <a class="button" href="#" id="botonCarrito">Carrito</a>
-    </nav>
+        </div>  
 </header>
 
 <!-- cosas del carrito -->
 <div id="carritoFlotante">
-  <h3>Productos en el carrito</h3>
-  <div id="contenidoCarrito"></div>
-  <img id="gifVacio" src="https://media1.tenor.com/m/q-E5wj1K6OYAAAAC/monsters-inc-sully.gif" alt="Está vacío..." style="width:100%; display:none; margin-top:10px;">
-  <br/><button id="vaciarCarrito" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Vaciar carrito</button>
-  <button id="comprarCarrito" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Comprar</button>
-    </div>
+    <h3>Productos en el carrito</h3>
+    <div id="contenidoCarrito"></div>
+    <img id="gifVacio" src="https://media1.tenor.com/m/q-E5wj1K6OYAAAAC/monsters-inc-sully.gif" alt="Está vacío..." style="width:100%; display:none; margin-top:10px;">
+    <br/><button id="vaciarCarrito" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Vaciar carrito</button>
+    <button id="comprarCarrito" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Comprar</button>
+</div>
     <div id="mensajeAlerta"></div>
-<script src="carrito.js"></script>
+    <script src="carrito.js"></script>
 
-<hr> </br>
-<section class="slogan-banner" style="background-image: url('https://www.clarin.com/2020/01/22/xeY76YWZ_1200x0__1.jpg');>
-    <div class="slogan-texto">
-        "Bienvenido a Àrtums" </br>
-        “Que tus pasos digan quién sos”
-    </div>
+<!--banner-->
+<section class="seccion-video">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="C:\Users\isabe\OneDrive\Escritorio\vscode\artums pagina web\imagenes\slogan.jpg" type="video/mp4" />
+      Tu navegador no soporta el video.
+    </video>
+    <div class="texto" id="texto-cambia">Bienvenido a Àrtums</div>
 </section>
+    <script>
+        const texto = document.getElementById('texto-cambia');
+    let mostrandoSlogan = false;
+    texto.addEventListener('click', () => {
+    texto.classList.add('oculto'); 
+    setTimeout(() => {
+        if (mostrandoSlogan) {
+        texto.textContent = "Bienvenido a Àrtums";
+        } else {
+        texto.textContent = "Que tus pasos digan quién sos";
+        }
+        mostrandoSlogan = !mostrandoSlogan;
+        texto.classList.remove('oculto');
+    }, 1300);
+    });
+    </script>
+</br></br>
 
-</br>
-    
-<h1 style="margin-left: 30%; margin-top: 40px;">¡Llegaron las NIKE AIR JORDAN MID 1!</h1>
-<img style="width: 100%; height: 630px;"alt="anuncio" src="jordan.png">
-<a style="background-color: black; color: white;font-size: larger;margin-left: 45%;"class=button href="productos.html#hombre">IR A VER</a>  
+<!--anuncios-->
+<section id="seccion">
+    <h1 style="font-size: 30px; text-align: center;color: black;">¡Llegaron las NIKE AIR JORDAN MID 1!</h1> 
+    <section id="seccion">
+    <img style="width: 100%; height: 450px;"alt="anuncio" src="jordan.png">
+    <a style="background-color: #d613bc; color: black;
+font-size: 30px;text-align: center;width: 100%;"class=button href="productos.html#hombre">IR A VER</a> 
+    </section>
 </br></br></br>
 
-<!-- productos y etc-->
+
+<!-- promociones y etc-->
 <section id="seccionX">
     <h1 class="titulosX">Disfruta de nuestra selección para el HOT SALE!</h1>
     <div class="productos">
@@ -55,71 +77,72 @@
             <img width=150px src="https://nikearprod.vtexassets.com/arquivos/ids/155412-1200-1200?width=1200&height=1200&aspect=true"/>
             <p class="nombre">NIKE Air Force 1</p>
             <p>$159999</p> 
-            <button style="background-color: #d613bc; color: white;" class="carritoprevio">Agregar al carrito</button>
+            <button style="background-color: white; color: black; border: none;" class="carritoprevio">Agregar al carrito</button>
         </section>
         <section class="cajasX">
             <img width=150px src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/53613197b55446e78d454e3c9d393a45_9366/Zapatillas_de_Running_Supernova_Stride_2.0_Negro_IG2164_01_00_standard.jpg"/>
             <p class="nombre">ADIDAS Supernova Stride 2.0</p>
             <p>$125999</p> 
-            <button style="background-color: #d613bc; color: white;" class="carritoprevio">Agregar al carrito</button>
+            <button style="background-color: white; color: black; border: none;" class="carritoprevio">Agregar al carrito</button>
         </section>
         <section class="cajasX">
             <img width=150px src="https://topperarg.vtexassets.com/arquivos/ids/422210-1200-1200?width=1200&height=1200&aspect=true"/>
-            <p class="nombre">ATOPPER Terre MiD</p>
+            <p class="nombre">TOPPER Terre MiD</p>
             <p>$49000</p> 
-            <button style="background-color: #d613bc; color: white;" class="carritoprevio">Agregar al carrito</button>
+            <button style="background-color: white; color: black; border: none;" class="carritoprevio">Agregar al carrito</button>
         </section>
         <section class="cajasX">
             <img width=150px src="https://media2.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-puma-turino-ii-sd-gris-640010397453006-1.jpg"/>
             <p class="nombre">PUMA Turino II SD</p>
             <p>$109999</p> 
-            <button style="background-color: #d613bc; color: white;" class="carritoprevio">Agregar al carrito</button>
+            <button style="background-color: white; color: black; border: none;" class="carritoprevio">Agregar al carrito</button>
         </section>
         <section class="cajasX">
             <img width=150px src="https://media2.solodeportes.com.ar/media/catalog/product/cache/7c4f9b393f0b8cb75f2b74fe5e9e52aa/z/a/zapatillas-fila-renno-classic-negra-76549793-300011l00258978-1.jpg"/>
             <p class="nombre">FILA Reno Classic</p>
             <p>$74900</p> 
-            <button style="background-color: #d613bc; color: white;" class="carritoprevio">Agregar al carrito</button>
+            <button style="background-color: white; color: black; border: none;" class="carritoprevio">Agregar al carrito</button>
         </section>
     </div>
 </section>
 </br>
 
-
-<h1 style="background-color: #ffb417;color: white;">Noticias O-O</h1></br>
-<div style="display: flex;flex-wrap: wrap;"> 
-<article style="width: 350px; margin: 35px;" type="article">
-    <h3>Del caño colabora con nosotros?!</h3>   
-    <p>Nicolás del Caño anuncia su amor por nuestra tienda en una entrevista privada con nuestro CEO. No descarta la posibilidad de una colaboraciòn benèfica.</p> 
-    <p>Gracias!</p>
-    <img style= "width: 350px;" alt="Caño" src="decaño.png">
-</article>
-<article style="width: 350px; margin: 35px;" type="article">
-    <h3>Por esto se separó Nico Vásquez:</h3>   
-    <p >El actor Nicolás Vàsquez fue visto el lunes 30 de Junio con un gerente de Àrtums. Fuentes muy confiables afirman que su esposa descubriò mensajes con contenido explìcito en el celular de la celebridad y decidiò dejarlo.</p> 
-    <p>Uy...</p>
-    <img style= "width: 350px;" alt="Nico" src="nico.png">
-</article>
-<article style="width: 350px; margin: 35px;" type="article">
-    <h3>Wanda de viaje</h3>   
-    <p>En su viaje con L-Gante, Wanda Nara fue vista usando indumentaria de nuestro deposito.</p> 
-    <p>Gracias!</p>
-    <img style= "width: 350px;" alt="Wanda" src="wandagate.png">
-</article>
+<!--noticias-->
+<h1 style="background-color: black;color: white; text-align: center;">Noticias: ¿Qué pasó con Àrtums esta la semana?</h1></br>
+    <div style="display: flex;flex-wrap: wrap;"> 
+    <article style="width: 350px; margin: 35px;" type="article">
+        <h3>Del caño colabora con nosotros?!</h3>   
+        <p>Nicolás del Caño anuncia su amor por nuestra tienda en una entrevista privada con nuestro CEO. No descarta la posibilidad de una colaboraciòn benèfica.</p> 
+        <p>Gracias!</p>
+            <img style= "width: 350px;" alt="Caño" src="decaño.png">
+        </article>
+    <article style="width: 350px; margin: 35px;" type="article">
+        <h3>Por esto se separó Nico Vásquez:</h3>   
+        <p >El actor Nicolás Vàsquez fue visto el lunes 30 de Junio con un gerente de Àrtums. Fuentes muy confiables afirman que su esposa descubriò mensajes con contenido explìcito en el celular de la celebridad y decidiò dejarlo.</p> 
+        <p>Uy...</p>
+            <img style= "width: 350px;" alt="Nico" src="nico.png">
+        </article>
+    <article style="width: 350px; margin: 35px;" type="article">
+        <h3>Wanda de viaje</h3>   
+        <p>En su viaje con L-Gante, Wanda Nara fue vista usando indumentaria de nuestro deposito.</p> 
+        <p>Gracias!</p>
+            <img style= "width: 350px;" alt="Wanda" src="wandagate.png">
+        </article>
 </div>
-<hr>
-<a style="margin-top: 25px; margin-bottom: 25px;background-color: #ffb417;text-decoration: none;"
+
+</br>
+<hr></br>
+<a style="margin-top: 25px; margin-bottom: 25px;background-color: black; color: white; text-align: center; text-decoration: none;"
 class="button" href="tyc.html">Terminos y condiciones</a>
+</br>
+<h1>Contacto</h1>
+<h3>CEOs:</h3>
+<p>Isa </br>
+Agus</br>
+Sol</p>
+<h3>Teléfono de la sucursal principal: ***********</h3>
+<h3>Dirección de la sucursal principal: Instituto Schiller Schule</h3>
+
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
