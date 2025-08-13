@@ -1,7 +1,5 @@
 <!DOCTYPE·html>
 <html>
-<!DOCTYPE·html>
-<html>
 <head>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 <meta charset="utf-8"/>
@@ -11,34 +9,36 @@
 
 <body>
 <!--encabezado-->
-    <header class="encabezado">
-    <div class="logo">
-        <img src="logo.jpg" alt="Logo Àrtums" />
-    </div>
-    <nav class="navegacion">
-        <a class="button" href="index.html">Inicio</a>
-        <a class="button" href="productos.html">Productos</a>
-        <a class="button" href="info.html">Sobre nosotros</a>
+<header class="encabezado">
+    <a href="index.html">
+    <img width=70px src="logo.jpg" href="index.html"/></a>
+    <nav> 
+        <a class=button href="index.html">Inicio</a> 
+        <a class=button href="productos.html">Productos</a>  
+        <a class="button" href="info.html">Sobre nosotros</a>  
         <a class="button" href="sucursales.html">Sucursales</a>
+    </nav> 
+    <div> 
         <a class="button" href="#" id="botonCarrito">Carrito</a>
-    </nav>
+        </div>  
 </header>
+
 <!-- cosas del carrito -->
-  <div id="carritoFlotante">
+<div id="carritoFlotante">
   <h3>Productos en el carrito</h3>
   <div id="contenidoCarrito"></div>
   <img id="gifVacio" src="https://media1.tenor.com/m/q-E5wj1K6OYAAAAC/monsters-inc-sully.gif" alt="Está vacío..." style="width:100%; display:none; margin-top:10px;">
   <br/><button id="vaciarCarrito" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Vaciar carrito</button>
   <button id="comprarCarrito" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Comprar</button>
-    </div>
-    <div id="mensajeAlerta"></div>
-  <script src="carrito.js"></script>
+</div>
+<div id="mensajeAlerta"></div>
+<script src="carrito.js"></script>
 
+</br>
 <hr>
-
 <h1>¿Quiénes somos?</h1>
-<h3 style="font-weight: lighter;">En Àrtums nos especializamos en la comercialización online de zapatillas importadas de primer nivel. Contamos con vínculos directos con representantes de marcas líderes como Nike, Adidas y Converse, lo que nos permite acceder a productos originales, de excelente calidad y con disponibilidad limitada en el mercado local.
-</br>Nuestro objetivo es ofrecer a nuestros clientes una experiencia de compra confiable, con acceso a modelos exclusivos y precios competitivos. En Àrtums combinamos conocimiento del comercio internacional, pasión por el calzado y compromiso con la excelencia.</br></p>
+<h3 style="font-weight: lighter; text-align: justify;">En Àrtums nos especializamos en la comercialización online de zapatillas importadas de primer nivel. Contamos con vínculos directos con representantes de marcas líderes como Nike, Adidas y Converse, lo que nos permite acceder a productos originales, de excelente calidad y con disponibilidad limitada en el mercado local.
+Nuestro objetivo es ofrecer a nuestros clientes una experiencia de compra confiable, con acceso a modelos exclusivos y precios competitivos. En Àrtums combinamos conocimiento del comercio internacional, pasión por el calzado y compromiso con la excelencia.</br></p>
 
 <!-- slides-->
 <div class="swiper">
@@ -52,8 +52,8 @@
     <div class="swiper-button-prev"></div>
     <!-- puntos -->
     <div class="swiper-pagination"></div>
-    </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
         loop: true,
@@ -70,31 +70,28 @@
           prevEl: '.swiper-button-prev'
         }
       });
-    </script>
+</script>
 
 <h2 style="background-color: #ff00e6; margin: 40px auto; width: 900px; padding: 15px 15px;box-shadow: 0 4px 10px gray; color: white;"
 >Fuimos consagrados la tienda online #1 de Argentina en 2024 por el ICII!</h2>
 
-<hr>
-
-<div style="display: flex;flex-wrap: wrap;">
-  <article style="margin-left: 200px;width: 250px; text-align: center;" type="article">
+<div style="background-color: black; color: white; display: flex;justify-content: space-between; padding: 30px">
+  <article style="margin-left: 20%;width: 250px; text-align: center;" type="article">
     <h2>Nuestra misión</h2>
     <h4 style="font-weight: lighter;">Un estilo de vida activo y saludable, que se pueda trasladar a la vida cotidiana de cada comprador.</h4>
-    <img style="width: 250px;" alt="mision" src="https://img1.picmix.com/output/stamp/thumb/5/9/2/9/1889295_6af00.gif">
+    <img style="width: 250px;" alt="mision" src="https://img1.picmix.com/output/stamp/thumb/5/9/2/9/1889295_6af00.gif";>
   </article>
-  <article style="margin-left: 600px;width: 250px; text-align: center;" type="article">
+  <article style="margin-right: 20%;width: 250px; text-align: center;" type="article">
     <h2>Nuestra visión</h2>
     <h4 style="font-weight: lighter;">Que los consumidores encuentren comodidad y estilo a un precio razonable</h4>
-    <img style="width: 250px;" alt="vision" src="https://media.baamboozle.com/uploads/images/261106/1659633530_154081_gif-url.gif">
+    <img style="width: 250px;" alt="vision" src="https://media.baamboozle.com/uploads/images/261106/1659633530_154081_gif-url.gif";>
   </article>
 </div>
-<hr style="margin-top: 30px;">
 
-<div style="display: flex;flex-wrap: wrap;"> 
-  <article type="article">
+<div style="display: flex;justify-content: space-between;"> 
+  <article type="article" style="margin-right: 4%;width: 80%; text-align: justify;">
     <h1>¿Cómo nació Àrtums?</h1>   
-    <h3 style="width: 650px; text-align: justify;font-weight: lighter;">Àrtums nació de una amistad forjada en los pasillos de la Universidad del Salvador. En 2015, XXX y ZZZ se graduaron en Comercio Exterior, unidos no solo por su formación académica, sino por una pasión compartida: las ventas y el deseo de emprender.
+    <h4 style="font-weight: lighter;">Àrtums nació de una amistad forjada en los pasillos de la Universidad del Salvador. En 2015, XXX y ZZZ se graduaron en Comercio Exterior, unidos no solo por su formación académica, sino por una pasión compartida: las ventas y el deseo de emprender.
 
     </br> Tras egresar, el contexto del mercado argentino presentaba un desafío: los productos importados estaban prácticamente fuera del alcance del consumidor promedio debido a los altos precios. En una charla navideña, la madre de XXX comentó con frustración que no podía encontrar calzado accesible para regalarle a sus sobrinos. No era una cuestión de escasez, sino de precios inalcanzables. Ese comentario encendió una chispa.
 
@@ -102,11 +99,11 @@
 
     </br>Con esa idea en mente, comenzaron a trabajar. Investigaron, tramitaron permisos, y así nació Àrtums, una marca con identidad propia y una misión clara: ofrecer productos de calidad internacional a precios justos.
 
-    </br>Desde entonces, Àrtums ha crecido gracias a una red de contactos estratégicos con representantes de marcas multinacionales, y al compromiso constante con la innovación y el acceso. Lo que empezó como una conversación en familia, hoy es una empresa en expansión que conecta mercados y personas, desde Argentina hacia el mundo.</h3>
+    </br>Desde entonces, Àrtums ha crecido gracias a una red de contactos estratégicos con representantes de marcas multinacionales, y al compromiso constante con la innovación y el acceso. Lo que empezó como una conversación en familia, hoy es una empresa en expansión que conecta mercados y personas, desde Argentina hacia el mundo.</h4>
   </article>
-  <article type="article">
-    <h2 style="margin-left: 300px;">Nuestras marcas amigas</h2>
-    <img style="margin-left: 150px;"alt="empresas" src="https://okdiario.com/img/vida-sana/2015/06/marcasdeportivas.jpg">
+  <article type="article" style="margin-left: 4%;width: 80%; text-align: justify;">
+    <h2>Nuestras marcas amigas</h2>
+    <img alt="empresas" src="https://okdiario.com/img/vida-sana/2015/06/marcasdeportivas.jpg">
   </article>
 </div>
 </br>
@@ -123,8 +120,12 @@
     <img style="height: 220px; width: auto;margin-left: 40px;" src="com5.png" class="carrusel-imagen" alt="Imagen 7">
    </div>
 </div>
-<hr>
 
+</br>
+<hr></br>
+<a style="margin-top: 25px; margin-bottom: 25px;background-color: black; color: white; text-align: center; text-decoration: none;"
+class="button" href="tyc.html">Terminos y condiciones</a>
+</br>
 <h1>Contacto</h1>
 <h3>CEOs:</h3>
 <p>Isa </br>
@@ -133,10 +134,6 @@ Sol</p>
 <h3>Teléfono de la sucursal principal: ***********</h3>
 <h3>Dirección de la sucursal principal: Instituto Schiller Schule</h3>
 
-<hr></br>
-<a style="margin-top: 25px; margin-bottom: 25px;background-color: #ffb417;text-decoration: none;"
-class="button" href="tyc.html">Terminos y condiciones</a>
 
 </body>
 </html>
-
