@@ -9,31 +9,22 @@
 
 <body>
 <!--encabezado-->
-    <header class="encabezado">
-    <div class="logo">
-        <img src="logo.jpg" alt="Logo Àrtums" />
-    </div>
-    <nav class="navegacion">
-        <a class="button" href="index.html">Inicio</a>
-        <a class="button" href="productos.html">Productos</a>
-        <a class="button" href="info.html">Sobre nosotros</a>
+<header class="encabezado">
+    <a href="index.html">
+    <img width=70px src="logo.jpg" href="index.html"/></a>
+    <nav> 
+        <a class=button href="index.html">Inicio</a> 
+        <a class=button href="productos.html">Productos</a>  
+        <a class="button" href="info.html">Sobre nosotros</a>  
         <a class="button" href="sucursales.html">Sucursales</a>
+    </nav> 
+    <div> 
         <a class="button" href="#" id="botonCarrito">Carrito</a>
-    </nav>
+        </div>  
 </header>
-<!-- cosas del carrito -->
-  <div id="carritoFlotante">
-  <h3>Productos en el carrito</h3>
-  <div id="contenidoCarrito"></div>
-  <img id="gifVacio" src="https://media1.tenor.com/m/q-E5wj1K6OYAAAAC/monsters-inc-sully.gif" alt="Está vacío..." style="width:100%; display:none; margin-top:10px;">
-  <br/><button id="vaciarCarrito" style="margin-bottom: 10px; padding: 5px 10px; cursor: pointer;">Vaciar carrito</button>
-  <button id="comprarCarrito" style="margin-top: 10px; padding: 5px 10px; cursor: pointer;">Comprar</button>
-    </div>
-    <div id="mensajeAlerta"></div>
-  <script src="carrito.js"></script>
-
+</br>
 <hr>
-
+</br>
 <h1>¿Dónde puedo retirar mi pedido?</h1>
 
 <div id="botonesSucursales">
@@ -76,8 +67,8 @@
     document.getElementById(`sucursal-${zona}`).style.display = 'block';
   }
 </script>
-
 </br>
+
 <h2>Horarios</h2>
 <ul style="font-size: large;">
     <li>Lunes a Viernes: de 9hs a 17hs</li>
@@ -85,6 +76,19 @@
     <li>Domingos: de 12hs a 17hs</li>
 </ul>
 
+</br>
+<hr></br>
+<a style="margin-top: 25px; margin-bottom: 25px;background-color: black; color: white; text-align: center; text-decoration: none;"
+class="button" href="tyc.html">Terminos y condiciones</a>
+</br>
+<h1>Contacto</h1>
+<h3>CEOs:</h3>
+<p>Isa </br>
+Agus</br>
+Sol</p>
+<h3>Teléfono de la sucursal principal: ***********</h3>
+<h3>Dirección de la sucursal principal: Instituto Schiller Schule</h3>
+
+
 </body>
 </html>
-
