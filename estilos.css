@@ -1,87 +1,94 @@
 body{
-    background: white;
 font-family: Aileron, sans-serif;
-}
-.slogan-banner {
-    background-position: center;
-    height:600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.slogan-texto {
-    font-size: 2em;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro semi-transparente */
-    padding: 20px 40px;
-    border-radius: 10px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
+/*header*/
 .encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    background-color: #ffffff; /* Cambia si querés un color de fondo */
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  height: 65px;
+}
+.encabezado nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+.encabezado div {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.logo img {
-    width: 100px; /* más chico */
-    height: auto;
+/*banner*/
+.seccion-video {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.navegacion {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex: 1;
-    text-align: center;
+.video-fondo {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.25); 
+  z-index: 1;
 }
-
-.linea-header {
-    border: none;
-    border-top: 2px solid #ccc;
-    margin: 0;
-}
-
-.button{
+.texto {
+  position: relative;
   color: white;
-  border: 2px solid white;
-  background-color: #d613bc;
-  text-decoration: none;
-  padding: 8px 8px;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 3;
+  cursor: pointer;
+  transition: opacity 1.2s ease, filter 1.2s ease;
+  opacity: 1;
+  filter: blur(0);
 }
-
+.texto.oculto {
+  opacity: 0;
+  filter: blur(8px);
+}
+.button{
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  text-decoration: none;
+  padding: 8px 8px;}
 .button:hover{
   box-shadow: 0 2px 15px gray;
   background-color: white;
-  border: 2px solid #d613bc;
+  border: 2px solid #ff00e6;
   color: black;
 }
 
+  /*promo*/
 #seccionX {
     height:450px;
     width: 100%;
     display: flex;
     flex-direction: column;
     background-image: url('https://media1.tenor.com/m/eSK4SyEXPr4AAAAC/anime-himmel.gif');
-    background-size: cover;
 }
 .titulosX {
     font-size: 30px;
     padding-left: 50px;
     color: white;
 }
-
 .cajasX {
-    background: rgb(4, 3, 22);
+    background: black;
     box-shadow: 0 1px 6px grey;
     color: white;
     text-align: center;
@@ -92,10 +99,10 @@ font-family: Aileron, sans-serif;
 .cajasX:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
-    box-shadow: 0 2px 12px #d613bc;
+    box-shadow: 0 2px 12px #ff00e6;
 }
 
-
+/*cajas*/
 #seccion {
     padding-top: 3px black;
     display: flex;
@@ -106,7 +113,7 @@ font-family: Aileron, sans-serif;
     font-size: 25px;
     padding-left: 50px;
     color: black;
-    background-color: #d613bc;
+    background-color: #ff00e6;
     padding: 20px;
 }
 .productos {
@@ -130,7 +137,7 @@ font-family: Aileron, sans-serif;
     box-shadow: 0 2px 12px gray;
 }
 
-
+/*carrito y etc*/
 #carritoFlotante {
   display: none;
   position: fixed;
@@ -138,7 +145,7 @@ font-family: Aileron, sans-serif;
   right: 20px;
   width: 280px;
   background: white;
-  border: 2px solid #ffb417;
+  border: 2px solid #ff613d;
   padding: 15px;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
@@ -167,7 +174,6 @@ font-family: Aileron, sans-serif;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   animation: slideDown 0.5s ease;
 }
-
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
@@ -177,27 +183,24 @@ font-family: Aileron, sans-serif;
   }
 }
 
+/*comprar*/
 table {
-      background-color: black;
       width: 80%;
       margin: 20px auto;
       border-collapse: collapse;
       font-size: 16px;
     }
-
 th, td {
-    border: 1px solid #ffb417;
-    background-color: white;
+    border: 1px solid black;
     color: black;
     padding: 12px;
     text-align: center;
     }
-
 th {
-background-color: #ffb417;
-color: black;
+  background-color: #ff613d;
+  border: 1px solid black;
+  color: black;
     }
-
 #total {
     background-color: white;
     color: black;
@@ -206,22 +209,28 @@ color: black;
     text-align: right;
     margin-right: 10%;
     }
-
 #finalizarCompraBtn {
     display: block;
     margin: 30px auto;
     padding: 10px 20px;
     font-size: 16px;
-    background: #d613bc;
+    background: #ff00e6;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     }
-
 #finalizarCompraBtn:hover {
-    background: #d613bc;
+    background: #ff00e6;
     }
+.carritoprevio {
+  background-color: #ff613d;
+  font: aileron, sans-sheriff;
+  border: 1px solid #ff613d;
+  padding: 5px;
+  box-shadow: 0 1px 12px grey;
+  color: white;
+}
 
 #mensajeEmergente {
     display: none;
@@ -242,6 +251,7 @@ color: black;
     padding: 30px;
 }
 
+/*fotos*/
 .swiper {
   width: 90%;
   max-width: 800px;
@@ -251,13 +261,11 @@ color: black;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
 .swiper-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .swiper-button-next,.swiper-button-prev {
   box-shadow: 0 4px 10px black;
   color: white;
@@ -266,27 +274,23 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 10px;
     padding: 10px 15px;
 }
-
 .carrusel {
   overflow: hidden;
   position: relative;
   background-image: url('https://media.istockphoto.com/id/1386703754/vector/red-orange-yellow-blurred-pattern-multicolored-background-smooth-gradient-abstract-design.jpg?s=612x612&w=0&k=20&c=am_vU_NYe49eIEltjrnlYOGmWS2Awts-XswDWVHaySk=');
-  height: 230px;
+  height: 35%;
   background-size: cover;
   padding-top: 10px;
 }
-
 .carrusel-contenedor {
   width: 180px;
   display: flex;
   animation: deslizar 10s infinite;
  }
-
 .carrusel-imagen {
   flex: 0 0 100%;
   object-fit: cover;
 }
-
 @keyframes deslizar {
   0% { transform: translateX(0%); }
   33% { transform: translateX(-100%); }
@@ -294,18 +298,8 @@ h1, h2, h3, h4, h5, h6, p {
   100% { transform: translateX(0%); }
 }
 
-.carritoprevio {
-  background-color: #ffb417;
-  font: aileron, sans-sheriff;
-  border: 1px solid #ffb417;
-  padding: 5px;
-  box-shadow: 0 1px 12px grey;
-  color: black;
-}
-
+/*sucursales*/
 #botonesSucursales button {
-  margin: 30px;
-  margin-left: 200px;
   padding: 20px 20px;
   cursor: pointer;
   background-color: black;
@@ -313,8 +307,9 @@ h1, h2, h3, h4, h5, h6, p {
   color: white;
   font-weight: bold;
   font-size: medium;
+  justify-content: space-between;
+  margin-left: 14%;
 }
-
 #contenidoSucursales {
   margin-top: 50px;
   background-color: #f6f6f6;
@@ -324,13 +319,3 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 40%;
   font-size: large;
 }
-
-
-
-
-
-
-
-
-
-
