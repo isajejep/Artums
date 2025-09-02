@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Calculadora de Talles - Àrtums</title>
+  <style>
+    :root{
+      --negro:#000000;
+      --amarillo:#ffb417;
+      --fucsia:#d613bc;
+      --bg:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:#111;line-height:1.5}
+    header{background:var(--negro);color:#fff;padding:20px;text-align:center}
+    header h1{margin-bottom:6px;font-size:clamp(22px,4vw,32px)}
+    main{max-width:700px;margin:20px auto;padding:16px}
+    section.card{background:#fff;border:2px solid var(--amarillo);border-radius:16px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.1);margin-bottom:20px}
+    h2{margin-bottom:14px;color:var(--fucsia)}
+    label{display:block;margin-top:12px;font-weight:600}
+    input,select{width:100%;padding:10px;margin-top:6px;border:2px solid #ccc;border-radius:12px;font-size:16px}
+    input:focus,select:focus{border-color:var(--fucsia);outline:none}
+    button{margin-top:18px;background:var(--amarillo);border:none;border-radius:12px;padding:12px 16px;cursor:pointer;font-weight:700;font-size:16px}
+    button:hover{background:#ffc94d}
+    .resultado{margin-top:20px;font-size:18px;font-weight:600;padding:12px;border-radius:12px;display:none}
+    .ok{background:#f5e8ff;border:2px solid var(--fucsia)}
+    .error{background:#ffecec;border:2px solid red;color:#b71c1c}
+    footer{border-top:3px solid var(--fucsia);padding:16px;font-size:14px;background:#fafafa}
+    .muted{opacity:.8}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Calculadora de Talles</h1>
+    <p>Ingresá la medida de tu pie y descubrí tu talle recomendado.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Ingresá tus datos</h2>
+      <form id="form-talle" novalidate>
+        <label for="cm">Medida del pie en centímetros</label>
+        <input type="number" id="cm" min="18" max="35" step="0.1" placeholder="Ej: 26.5" required/>
+
+        <label for="genero">Género</label>
+        <select id="genero" required>
+          <option value="">Seleccionar...</option>
+          <option value="hombre">Hombre</option>
+          <option value="mujer">Mujer</option>
+        </select>
+
+        <button type="submit">Calcular talle</button>
+      </form>
+      <div id="resultado" class="resultado"></div>
+    </section>
+
+    <section class="card">
+      <h2>Wireframe</h2>
+      <pre>
+┌─────────────────────────────┐
+│ Medida pie [26.5] cm        │
+│ Género [hombre/mujer]       │
+│ [ Calcular talle ]          │
+└─────────────────────────────┘
+Resultado: Talle AR/BR 41, EU 42, US 9
+      </pre>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Documentación: uso de IA</h2>
+    <ol>
+      <li><strong>Definición del problema:</strong> se pidió a la IA proponer otro problema real → ayudar a clientes a elegir el talle correcto.</li>
+      <li><strong>Diseño:</strong> la IA armó el wireframe inicial con inputs y resultado esperado.</li>
+      <li><strong>Generación:</strong> se solicitó a la IA crear HTML semántico, CSS responsive con colores de marca y la lógica JS.</li>
+      <li><strong>Depuración:</strong> la IA sugirió validaciones (ej. rango de cm) y mejoras de accesibilidad.</li>
+    </ol>
+    <p class="muted">Así se cumple con el requisito de documentar cómo se usó IA en el proceso.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-talle');
+    const resultado = document.getElementById('resultado');
+
+    // Tabla simplificada de talles
+    const tabla = {
+      hombre: [
+        {cm:24.5, ar:39, eu:40, us:7},
+        {cm:25.5, ar:40, eu:41, us:8},
+        {cm:26.5, ar:41, eu:42, us:9},
+        {cm:27.5, ar:42, eu:43, us:10},
+        {cm:28.5, ar:43, eu:44, us:11},
+        {cm:29.5, ar:44, eu:45, us:12}
+      ],
+      mujer: [
+        {cm:22.5, ar:35, eu:36, us:5},
+        {cm:23.5, ar:36, eu:37, us:6},
+        {cm:24.5, ar:37, eu:38, us:7},
+        {cm:25.5, ar:38, eu:39, us:8},
+        {cm:26.5, ar:39, eu:40, us:9},
+        {cm:27.5, ar:40, eu:41, us:10}
+      ]
+    };
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      resultado.style.display = 'block';
+      resultado.className = 'resultado';
+
+      const cm = parseFloat(document.getElementById('cm').value);
+      const genero = document.getElementById('genero').value;
+
+      if(isNaN(cm) || !genero){
+        resultado.textContent = '⚠ Por favor completá todos los campos correctamente.';
+        resultado.classList.add('error');
+        return;
+      }
+
+      // buscar talle más cercano
+      const opciones = tabla[genero];
+      let recomendado = opciones.reduce((prev, curr) => Math.abs(curr.cm - cm) < Math.abs(prev.cm - cm) ? curr : prev);
+
+      resultado.innerHTML = `✔ Talle recomendado:<br>
+        AR/BR: <strong>${recomendado.ar}</strong> &nbsp;|&nbsp;
+        EU: <strong>${recomendado.eu}</strong> &nbsp;|&nbsp;
+        US: <strong>${recomendado.us}</strong>`;
+      resultado.classList.add('ok');
+    });
+  </script>
+</body>
+</html>
