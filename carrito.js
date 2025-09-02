@@ -37,14 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // agregar producto
-  function agregarAlCarrito(nombre, precio) {
-    const nuevo = { nombre, precio };
-    let carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
-    carritoGuardado.push(nuevo);
-    localStorage.setItem("carrito", JSON.stringify(carritoGuardado));
-    actualizarCarritoVisual();
-    mostrarAlerta(`Agregaste "${nombre}" al carrito`);
-  }
+function agregarAlCarrito(nombre, precio, talle) {
+  const nuevo = { nombre, precio, talle };
+  let carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+  carritoGuardado.push(nuevo);
+  localStorage.setItem("carrito", JSON.stringify(carritoGuardado));
+  actualizarCarritoVisual();
+  mostrarAlerta(`Agregaste "${nombre}" (Talle ${talle}) al carrito`);
+}
 
   // mostrar productos desde localStorage
   function actualizarCarritoVisual() {
@@ -80,3 +80,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // mostrar sololo que haya en localStorage
   actualizarCarritoVisual();
 });
+
