@@ -319,3 +319,24 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 40%;
   font-size: large;
 }
+
+<style>
+  #botonTalle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* 👈 cambia de right a left */
+    background: #ffb417; /* amarillo de tu marca */
+    color: #000000; /* texto negro */
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    z-index: 1000;
+    transition: transform 0.1s ease-in-out, background 0.2s;
+  }
+  #botonTalle:hover {
+    background: #ffc94d; /* un poco más claro al pasar el mouse */
+    transform: scale(1.05);
+  }
+</style>
