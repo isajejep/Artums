@@ -6,28 +6,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const botonVaciar = document.getElementById("vaciarCarrito");
   const alerta = document.getElementById("mensajeAlerta");
 
-  // mostrar ono el carrito
+  // mostrar o no el carrito
   document.getElementById("botonCarrito").addEventListener("click", function (e) {
     e.preventDefault();
     carrito.style.display = carrito.style.display === "block" ? "none" : "block";
     actualizarCarritoVisual();
   });
 
-  // boton d compra quete lleva al html
+  // boton de compra
   botonComprar.addEventListener("click", function () {
     window.location.href = "compra.html";
   });
 
   // vaciar carrito
   botonVaciar.addEventListener("click", function () {
-    localStorage.removeItem("carrito"); // Borrar datos del almacenamiento
-    contenido.innerHTML = ""; // Borrar lo visible
+    localStorage.removeItem("carrito");
+    contenido.innerHTML = "";
     gif.style.display = "block";
     botonComprar.style.display = "none";
-    mostrarAlerta("vaciaste tu carrito :(((((");
+    mostrarAlerta("Vaciaste tu carrito :(((((");
   });
 
-  //  alerta !!!!!!!!
+  // alerta
   function mostrarAlerta(texto) {
     alerta.textContent = texto;
     alerta.style.display = "block";
@@ -37,19 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // agregar producto
-function agregarAlCarrito(nombre, precio, talle) {
-  const nuevo = { nombre, precio, talle };
-  let carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
-  carritoGuardado.push(nuevo);
-  localStorage.setItem("carrito", JSON.stringify(carritoGuardado));
-  actualizarCarritoVisual();
-  mostrarAlerta(`Agregaste "${nombre}" (Talle ${talle}) al carrito`);
-}
+  function agregarAlCarrito(nombre, precio, talle) {
+    const nuevo = { nombre, precio, talle };
+    let carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+    carritoGuardado.push(nuevo);
+    localStorage.setItem("carrito", JSON.stringify(carritoGuardado));
+    actualizarCarritoVisual();
+    mostrarAlerta(`Agregaste "${nombre}" (Talle ${talle}) al carrito`);
+  }
 
   // mostrar productos desde localStorage
   function actualizarCarritoVisual() {
     const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
-    contenido.innerHTML = ""; // limpiar lo anterior
+    contenido.innerHTML = "";
 
     if (carritoGuardado.length === 0) {
       gif.style.display = "block";
@@ -67,25 +67,19 @@ function agregarAlCarrito(nombre, precio, talle) {
   }
 
   // evento a cada botón
-const botones = document.querySelectorAll(".carritoprevio");
-botones.forEach(boton => {
-  boton.addEventListener("click", function () {
-    const nombre = this.parentElement.querySelectorAll("p")[0].innerText;
-    const precioTexto = this.parentElement.querySelectorAll("p")[1].innerText;
-    const precio = precioTexto.replace(/[^\d]/g, "");
-    
-    // 👇 busca el select dentro de la misma caja
-    const talleSelect = this.parentElement.querySelector(".talleProducto");
-    const talle = talleSelect ? talleSelect.value : "No seleccionado"; 
-    
-    agregarAlCarrito(nombre, precio, talle);
+  const botones = document.querySelectorAll(".carritoprevio");
+  botones.forEach(boton => {
+    boton.addEventListener("click", function () {
+      const nombre = this.parentElement.querySelectorAll("p")[0].innerText;
+      const precioTexto = this.parentElement.querySelectorAll("p")[1].innerText;
+      const precio = precioTexto.replace(/[^\d]/g, "");
+      const talleSelect = this.parentElement.querySelector(".talleProducto");
+      const talle = talleSelect ? talleSelect.value : "No seleccionado";
+
+      agregarAlCarrito(nombre, precio, talle);
+    });
   });
-});
 
-
-  // mostrar sololo que haya en localStorage
+  // mostrar lo guardado en localStorage
   actualizarCarritoVisual();
 });
-
-
-
