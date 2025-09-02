@@ -73,13 +73,19 @@ botones.forEach(boton => {
     const nombre = this.parentElement.querySelectorAll("p")[0].innerText;
     const precioTexto = this.parentElement.querySelectorAll("p")[1].innerText;
     const precio = precioTexto.replace(/[^\d]/g, "");
-    const talle = this.parentElement.querySelector(".talleProducto").value; // 👈 nuevo
+    
+    // 👇 busca el select dentro de la misma caja
+    const talleSelect = this.parentElement.querySelector(".talleProducto");
+    const talle = talleSelect ? talleSelect.value : "No seleccionado"; 
+    
     agregarAlCarrito(nombre, precio, talle);
-    });
   });
+});
+
 
   // mostrar sololo que haya en localStorage
   actualizarCarritoVisual();
 });
+
 
 
