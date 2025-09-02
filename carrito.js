@@ -60,24 +60,26 @@ function agregarAlCarrito(nombre, precio, talle) {
 
       carritoGuardado.forEach(item => {
         const div = document.createElement("div");
-        div.textContent = `${item.nombre}    $${item.precio}`;
+        div.textContent = `${item.nombre} (Talle ${item.talle}) - $${item.precio}`;
         contenido.appendChild(div);
       });
     }
   }
 
   // evento a cada botón
-  const botones = document.querySelectorAll(".carritoprevio");
-  botones.forEach(boton => {
-    boton.addEventListener("click", function () {
-      const nombre = this.parentElement.querySelectorAll("p")[0].innerText;
-      const precioTexto = this.parentElement.querySelectorAll("p")[1].innerText;
-      const precio = precioTexto.replace(/[^\d]/g, ""); // quitar caracteres no numéricos
-      agregarAlCarrito(nombre, precio);
+const botones = document.querySelectorAll(".carritoprevio");
+botones.forEach(boton => {
+  boton.addEventListener("click", function () {
+    const nombre = this.parentElement.querySelectorAll("p")[0].innerText;
+    const precioTexto = this.parentElement.querySelectorAll("p")[1].innerText;
+    const precio = precioTexto.replace(/[^\d]/g, "");
+    const talle = this.parentElement.querySelector(".talleProducto").value; // 👈 nuevo
+    agregarAlCarrito(nombre, precio, talle);
     });
   });
 
   // mostrar sololo que haya en localStorage
   actualizarCarritoVisual();
 });
+
 
