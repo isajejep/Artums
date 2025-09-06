@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: large;
 }
 
-  #botonTalle {
+  .button #botonTalle {
     display: none;
   position: fixed;
   bottom: 70px;
@@ -344,4 +344,5 @@ h1, h2, h3, h4, h5, h6, p {
   border: 2px solid #ff00e6;
   color: black;
   }
+
 
