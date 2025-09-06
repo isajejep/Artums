@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: large;
 }
 
-  .button #botonTalle {
+  .botonTalle {
     display: none;
   position: fixed;
   bottom: 70px;
@@ -337,12 +337,13 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
   }
-  #botonTalle:hover {
+  .botonTalle:hover {
     transform: scale(1.05);
      box-shadow: 0 2px 15px gray;
   background-color: white;
   border: 2px solid #ff00e6;
   color: black;
   }
+
 
 
