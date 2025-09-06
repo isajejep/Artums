@@ -145,7 +145,7 @@ font-family: Aileron, sans-serif;
   right: 20px;
   width: 280px;
   background: white;
-  border: 2px solid #ff613d;
+  border: 2px solid black;
   padding: 15px;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
@@ -343,4 +343,5 @@ h1, h2, h3, h4, h5, h6, p {
   color: black;
   }
 </style>
+
 
