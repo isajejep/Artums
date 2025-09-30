@@ -1,0 +1,71 @@
+<!-- Modelo 1 -->
+<div class="producto">
+  <!-- Imagen -->
+  <img src="imagenes/nike-m2k-tekno-white-grey.png" alt="Nike M2K Tekno White Grey">
+
+  <!-- Nombre -->
+  <h4>Nike M2K Tekno "White Grey"</h4>
+
+  <!-- Precio -->
+  <p class="precio">$240.000</p>
+
+  <!-- Talles -->
+  <p class="talles">Talle: 36 37 38 39 40 41 42 43 44</p>
+
+  <!-- Botón -->
+  <button onclick="agregarAlCarrito('Nike M2K Tekno White Grey')">Agregar al carrito</button>
+</div>
+
+<!-- Modelo 2 -->
+<div class="producto">
+  <!-- Imagen -->
+  <img src="imagenes/vans-knu-skool-shoe.png" alt="Vans Knu Skool Shoe">
+
+  <!-- Nombre -->
+  <h4>Vans Knu Skool Shoe</h4>
+
+  <!-- Precio -->
+  <p class="precio">$150.000</p>
+
+  <!-- Talles -->
+  <p class="talles">Talle: 35 36 37 38 39 40 41 42 43 44</p>
+
+  <!-- Botón -->
+  <button onclick="agregarAlCarrito('Vans Knu Skool Shoe')">Agregar al carrito</button>
+</div>
+
+<!-- Modelo 3 -->
+<div class="producto">
+  <!-- Imagen -->
+  <img src="imagenes/vans-ultrarange-2-0-shoe.png" alt="Vans UltraRange 2.0 Shoe">
+
+  <!-- Nombre -->
+  <h4>Vans UltraRange 2.0 Shoe</h4>
+
+  <!-- Precio -->
+  <p class="precio">$170.000</p>
+
+  <!-- Talles -->
+  <p class="talles">Talle: 35 36 37 38 39 40 41 42 43 44</p>
+
+  <!-- Botón -->
+  <button onclick="agregarAlCarrito('Vans UltraRange 2.0 Shoe')">Agregar al carrito</button>
+</div>
+
+<!-- Modelo 4 -->
+<div class="producto">
+  <!-- Imagen -->
+  <img src="imagenes/vans-knu-skool-blue.png" alt="Vans Knu Skool Shoe Azul">
+
+  <!-- Nombre -->
+  <h4>Vans Knu Skool Shoe</h4>
+
+  <!-- Precio -->
+  <p class="precio">$150.000</p>
+
+  <!-- Talles -->
+  <p class="talles">Talle: 35 36 37 38 39 40 41 42 43 44 45 46</p>
+
+  <!-- Botón -->
+  <button onclick="agregarAlCarrito('Vans Knu Skool Shoe Azul')">Agregar al carrito</button>
+</div>
