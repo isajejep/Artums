@@ -1,0 +1,27 @@
+<script>
+  function toggleWishlist(element, productId) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+    if (wishlist.includes(productId)) {
+      wishlist = wishlist.filter(id => id !== productId);
+      element.classList.remove('active');
+    } else {
+      wishlist.push(productId);
+      element.classList.add('active');
+    }
+
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+  }
+
+  // Marcar productos como favoritos al cargar
+  window.addEventListener('DOMContentLoaded', () => {
+    const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    document.querySelectorAll('.product').forEach(product => {
+      const id = parseInt(product.dataset.id);
+      if (wishlist.includes(id)) {
+        const heart = product.querySelector('.wishlist-btn');
+        if (heart) heart.classList.add('active');
+      }
+    });
+  });
+</script>
