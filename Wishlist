@@ -1,0 +1,20 @@
+<style>
+  .wishlist-btn {
+    cursor: pointer;
+    font-size: 20px;
+    color: #bbb;
+  }
+
+  .wishlist-btn.active {
+    color: red;
+  }
+</style>
+
+<div class="product" data-id="1">
+  <h4>Nike Air Max</h4>
+  <p>$45.000</p>
+  <span class="wishlist-btn" onclick="toggleWishlist(this, 1)">❤️</span>
+</div>
+
+
+
